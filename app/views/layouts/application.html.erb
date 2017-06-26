@@ -6,11 +6,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
+
+    <header class="navbar  navbar-inverse">
+    <div class="navbar-class">
+      <div class="container">
+
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", lists_path %></li>
+          <li><%= link_to "New List", new_list_path %></li>
+        </ul>
+
+      </div>
+    </div>
+  </header>
+  <%= flash[:alert] %>
+  <%= flash[:notice] %>
     <%= yield %>
   </body>
 </html>
